@@ -6,15 +6,18 @@ nav{
     display: flex;
     justify-content: space-between;
 
-    padding: var(--padding-primary);
+    padding: var(--padding-nav);
     position: absolute;
     z-index: 99;
 }
+
+
 
 nav > div > a:first-child{
     position: relative;
     padding-right: 32px;
 }
+
 nav > div > a:first-child::before{
     width: 20px;
     height: 1px;
@@ -35,6 +38,8 @@ nav > div > a:first-child::after{
     bottom: 8px;
 }
 
+
+/* INTRO SECTION ////////////////////////////////////////////////*/
 .intro-section{
     position: relative;
     display: flex;
@@ -48,8 +53,6 @@ nav > div > a:first-child::after{
     background-size: cover;
 }
 
-
-
 .intro-section div:first-child{
     display: flex;
     flex-direction: column;
@@ -57,8 +60,8 @@ nav > div > a:first-child::after{
     align-items: center;
 }
 
-.intro-section div:first-child img,
-.intro-section div:first-child svg{
+.intro-section > div:first-child > img,
+.intro-section > div:first-child > svg{
     margin-bottom: 32px;
 }
 
@@ -74,4 +77,45 @@ nav > div > a:first-child::after{
 .intro-section div:last-child p,
 .intro-section div:last-child a{
     margin-bottom: 20px;
+}
+
+
+/* RULES SECTION ////////////////////////////////////////////////*/
+.rules-section{
+    padding: var(--padding-primary);
+    padding-top: 100px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.rules-section > div:first-child > h3{
+    padding-bottom: 8px;
+}
+.rules-section > div:first-child{
+    border: solid purple 1px;
+    margin-bottom: 32px;
+}
+
+.rules-section > div:last-child{
+    border: solid red 1Px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.rules-section > div:last-child > div{
+    border: solid 1px green;
+    display: flex;flex-direction: column;
+    align-items: flex-start;
+    margin-right: 24px;
+}
+.rules-section > div:last-child > div:last-child{
+    margin-right: 0px;
+}
+.rules-section > div:last-child > div > div{
+    width: 100%;
+    text-align: center;
 }

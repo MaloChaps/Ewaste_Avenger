@@ -36,7 +36,8 @@
 
 :root{
 	/*padding*/
-	--padding-primary: 20px 12px 12px 20px;
+	--padding-nav: 20px 12px 12px 20px;
+	--padding-primary: 0px 56px 0px 56px;
 	
 	/*color*/
 	--black-primary: #111111;
@@ -147,6 +148,14 @@ body{
 	font-style: normal;
 	font-weight: 300;
 	font-size: 72px;
+	line-height: 100%;
+}
+
+.pixel-40{
+	font-family: 'Retro Gaming';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 40px;
 	line-height: 100%;
 }
 
