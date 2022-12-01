@@ -1,0 +1,186 @@
+@font-face {
+	font-family: "Scto Grotesk A Medium Italic";
+	src: url('../../sources/fonts/Scto\ Grotesk\ A\ Medium\ Italic.otf');
+}
+
+@font-face {
+	font-family: "Scto Grotesk A Light Italic";
+	src: url('../../sources/fonts/Scto\ Grotesk\ A\ Light\ Italic.otf');
+}
+
+@font-face {
+	font-family: "Scto Grotesk A Light";
+	src: url('../../sources/fonts/Scto\ Grotesk\ A\ Light.otf');
+}
+
+@font-face {
+	font-family: "Scto Grotesk A Medium";
+	src: url('../../sources/fonts/Scto\ Grotesk\ A\ Medium.otf');
+}
+
+@font-face {
+	font-family: "Scto Grotesk A Regular Italic";
+	src: url('../../sources/fonts/Scto\ Grotesk\ A\ Regular\ Italic.otf');
+}
+
+@font-face {
+	font-family: "Scto Grotesk A Regular";
+	src: url('../../sources/fonts/Scto\ Grotesk\ A\ Regular.otf');
+}
+
+@font-face {
+	font-family: "Retro Gaming";
+	src: url('../../sources/fonts/Retro\ Gaming.ttf');
+}
+
+
+:root{
+	/*padding*/
+	--padding-primary: 20px 12px 12px 20px;
+	
+	/*color*/
+	--black-primary: #111111;
+	--black-secondary: #161616;
+	--grey-primary: #999999;
+ 	--white-primary: #F9F9F9;
+	--gradient-primary: linear-gradient(180deg, #28FB20 0%, #FFFF22 78.12%, #FD22FE 98.96%);
+
+	--white-700: rgba(255, 255, 255, 0.06);
+	--White-500: rgba(255, 255, 255, 0.28);
+	--White-300: rgba(255, 255, 255, 0.85);
+	--White-100: rgba(255, 255, 255, 0.97);
+
+	--Grey-200: rgba(17, 17, 17, 0.06);
+	--Grey-400: rgba(17, 17, 17, 0.43);
+	--Grey-600: rgba(17, 17, 17, 0.85);
+	--Grey-600: rgba(17, 17, 17, 0.97);
+
+}
+
+
+html *{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+/*scroll bar css*/
+
+::-webkit-scrollbar {
+ display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: none;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+   display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ display: none;
+}
+
+body{
+	scroll-behavior: smooth;
+	background: var(--black-secondary);
+}
+
+
+/* Font assets */
+.TextGradient{
+	background: var(--gradient-primary);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.TextWhite{
+	color: var(--white-primary);
+}
+
+.TextBlack{
+	color: var(--black-primary);
+}
+
+.TextGrey{
+	color: var(--grey-primary);
+}
+
+.TextUppercase{
+	text-transform: uppercase;
+}
+
+.TextLink{
+	transition: 0.3s ease-in;
+}
+
+.TextLink:hover{
+	color: var(--white-primary);
+	transition: 0.3s ease-out;
+	text-decoration-line: underline;
+	
+}
+
+.Button{
+	padding: 16px 62px;
+	border: 1px solid var(--White-500);
+	border-radius: 6px;
+	transition: 0.3s ease-in;
+}
+
+.Button:hover{
+	padding: 16px 62px;
+	border: 1px solid var(--white-primary);
+	border-radius: 6px;
+	transition: 0.3s ease-out;
+}
+
+/* PIXEL FONTS */
+.pixel-72{
+	font-family: 'Retro Gaming';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 72px;
+	line-height: 100%;
+}
+
+.pixel-20{
+	font-family: 'Retro Gaming';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 100%;
+}
+
+/* NORMAL FONTS */
+
+.body-16{
+	font-family: 'Scto Grotesk A Light';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.body-16{
+	font-family: 'Scto Grotesk A Light';
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+
+.TextBold{
+	font-family: 'Scto Grotesk A Medium';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+}
+
