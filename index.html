@@ -34,7 +34,7 @@
 
 		<!-- Introduction game -->
 		<div class="button-introduction">
-			<a class="Button dark body-16 TextWhite TextBold" onclick="nextFunction()">Play  now</a>
+			<a class="Button dark body-16 TextWhite TextBold" id="playNow" onclick="nextFunction()">Play  now</a>
 			<a class="body-16 TextLink TextGrey" href="https://backmarket.com" target="_blanck" id="backButton">Discover more information</a>
 		</div>
 		<!-- Introduction game -->
@@ -18844,13 +18844,21 @@
 			var introSection = document.getElementById("intro");
 			var rules = document.getElementById("rules");
 			var backButton = document.getElementById("backButton");
+			var playNow = document.getElementById("playNow");
 
 			introSection.style.display = "none";
 			rules.style.display = "flex";
 
+			
+
 			backButton.innerHTML = "Back to the intro";
 			backButton.setAttribute("href", "index.html");
 			backButton.setAttribute("target", "_self");
+
+			setTimeout(checkPlay, 100); 
+			function checkPlay() {
+				playNow.setAttribute("href", "game.html");
+			}
 		}
 	</script>
 
