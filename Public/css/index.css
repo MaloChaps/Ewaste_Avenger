@@ -22,7 +22,7 @@
 
 @media (max-device-width : 800px){
     .button-introduction{
-        bottom: 72px;
+        bottom: 90px;
     }
 }
 
@@ -71,7 +71,7 @@
         width: 100%;
     }
     .intro-section > svg:first-child{
-        margin-top: 112px !important;
+        margin-top: 90px !important;
         scale: 0.9;
         margin-bottom: 20px;
     }
