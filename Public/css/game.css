@@ -1,0 +1,28 @@
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: blye;
+}
