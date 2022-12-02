@@ -10,7 +10,7 @@
     <link rel="preload" href="Public/css/index.css" as="style">
 
 	<link rel="stylesheet" href="Public/css/Dist/dist.css" >
-	<link rel="stylesheet" href="Public/css/index.css" >
+	<link rel="stylesheet" href="Public/css/index.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="index, follow">
@@ -24,7 +24,6 @@
 <body>
 
     <main>
-
 		<!-- Nav -->
 		<nav>
 			<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
@@ -38,7 +37,7 @@
 			<a class="Button dark body-16 TextWhite TextBold" onclick="nextFunction()">Play  now</a>
 			<a class="body-16 TextLink TextGrey" href="https://backmarket.com" target="_blanck" id="backButton">Discover more information</a>
 		</div>
-
+		<!-- Introduction game -->
 		<section class="intro-section" id="intro">
 				<!-- <img class="fit-picture" src="Public/sources/images/Logo.png" alt="" width="30%"> -->
 				<svg width="321" height="123" viewBox="0 0 321 123" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18808,10 +18807,10 @@
 					</linearGradient>
 					</defs>
 				</svg>	
-				<p class="body-16 TextWhite">Only you can save devices from becoming e-waste. <br>Become the hero you were meant to be!</p>
+				<p class="body-16 TextWhite">Only you can save devices from becoming e-waste. Become the hero you were meant to be!</p>
 				<div><img src="public/sources/images/Skydesktop.svg" alt=""></div>
 		</section>
-
+		<!-- Rules section -->
 		<section class="rules-section" id="rules">
 			<div>
 				<h3 class="pixel-40 TextWhite">The Rules</h3>
@@ -18851,6 +18850,7 @@
 
 			backButton.innerHTML = "Back to the intro";
 			backButton.setAttribute("href", "index.html");
+			backButton.setAttribute("target", "_self");
 		}
 	</script>
 

@@ -36,8 +36,10 @@
 
 :root{
 	/*padding*/
-	--padding-nav: 20px 12px 12px 20px;
+	--padding-nav: 20px 12px 20px 12px;
+	--padding-nav-secondary: 16px;
 	--padding-primary: 0px 56px 0px 56px;
+	--padding-secondary: 0px 12px 0px 12px;
 	
 	/*color*/
 	--black-primary: #111111;

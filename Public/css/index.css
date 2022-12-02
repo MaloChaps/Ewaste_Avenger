@@ -24,7 +24,7 @@ main{
     align-items: center;
 }
 .button-introduction > a:first-child{
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 nav{
@@ -62,6 +62,11 @@ nav > div > a:first-child::after{
     bottom: 8px;
 
 }
+@media (max-device-width : 800px) {
+   nav{
+    padding: var(--padding-nav-secondary);
+   }
+}
 
 
 
@@ -85,6 +90,9 @@ nav > div > a:first-child::after{
     margin-bottom: 56px;
     scale: 1.2;
 }
+.intro-section > p{
+    width: 400px;
+}
 
 .intro-section > div:last-child{
     position: absolute;
@@ -101,9 +109,18 @@ nav > div > a:first-child::after{
     text-align: center;
 } 
 
-@media (max-device-width : 800px) {
-    .intro-section{
-        border: solid red 1Px;
+@media (max-device-width : 800px){
+    .intro-section > p{
+        width: 100%;
+    }
+    .intro-section > svg:first-child{
+        margin-top: 112px !important;
+        scale: 0.9;
+        margin-bottom: 20px;
+    }
+    .intro-section > svg{
+        margin-bottom: 16px;
+        scale: 0.9;
     }
 }
 
@@ -119,12 +136,12 @@ nav > div > a:first-child::after{
     justify-content: center;
 }
 
-.rules-section > div:first-child > h3{
-    padding-bottom: 8px;
-}
-
 .rules-section > div:first-child{
     margin-bottom: 32px;
+}
+
+.rules-section > div:first-child > h3{
+    padding-bottom: 8px;
 }
 
 .rules-section > div:last-child{
@@ -143,7 +160,7 @@ nav > div > a:first-child::after{
     padding: 24px;
     border-radius: 4px;
     scroll-snap-align: start;
-  scroll-snap-stop: normal;
+    scroll-snap-stop: normal;
     
 }
 .rules-section > div:last-child > div:last-child{
@@ -161,7 +178,21 @@ nav > div > a:first-child::after{
 }
 
 @media (max-device-width : 800px) {
-    
+    .rules-section{
+        padding: var(--padding-secondary);
+        padding-top: 80px !important;
+    }
+    .rules-section > div:first-child{
+        margin-bottom: 24px;
+    }
+    .rules-section > div:last-child > div{
+        padding: 12px;
+        margin-right: 12px;
+    }
+    .rules-section > div:last-child > div > h3,
+    .rules-section > div:last-child > div > div{
+    margin-bottom: 8px;
+}
 }
 
 
