@@ -1,10 +1,3 @@
-main{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow-y: hidden;
-}
-
 .displayNone{
     display: none;
 }
@@ -24,50 +17,14 @@ main{
     align-items: center;
 }
 .button-introduction > a:first-child{
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    padding: var(--padding-nav);
-    position: absolute;
-    z-index: 99;
+@media (max-device-width : 800px){
+    .button-introduction{
+        bottom: 72px;
+    }
 }
-
-nav > div > a:first-child{
-    position: relative;
-    padding-right: 32px;
-}
-
-nav > div > a:first-child::before{
-    width: 20px;
-    height: 1px;
-    content: '';
-    background: white;
-    position: absolute;
-    right: 0px;
-    top: 8px;
-}
-
-nav > div > a:first-child::after{
-    width: 20px;
-    height: 1px;
-    content: '';
-    background: white;
-    position: absolute;
-    right: 0px;
-    bottom: 8px;
-
-}
-@media (max-device-width : 800px) {
-   nav{
-    padding: var(--padding-nav-secondary);
-   }
-}
-
 
 
 /* INTRO SECTION ////////////////////////////////////////////////*/
@@ -183,7 +140,7 @@ nav > div > a:first-child::after{
         padding-top: 80px !important;
     }
     .rules-section > div:first-child{
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
     .rules-section > div:last-child > div{
         padding: 12px;

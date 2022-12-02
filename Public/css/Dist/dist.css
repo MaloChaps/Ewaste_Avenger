@@ -142,6 +142,8 @@ a{
 	transition: 0.3s ease-in;
 }
 
+
+
 .Button:hover{
 	padding: 16px 62px;
 	border: 1px solid var(--white-primary);
@@ -157,6 +159,11 @@ a{
 	font-size: 72px;
 	line-height: 100%;
 }
+@media (max-device-width : 800px){
+	.pixel-72{
+		font-size: 60px;
+	}
+}
 
 .pixel-40{
 	font-family: 'Retro Gaming';
@@ -164,6 +171,12 @@ a{
 	font-weight: 300;
 	font-size: 40px;
 	line-height: 100%;
+}
+
+@media (max-device-width : 800px){
+	.pixel-40{
+		font-size: 32px;
+	}
 }
 
 .pixel-20{
@@ -200,3 +213,52 @@ a{
 	line-height: 20px;
 }
 
+
+
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    padding: var(--padding-nav);
+    position: absolute;
+    z-index: 99;
+}
+
+nav > div > a:first-child{
+    position: relative;
+    padding-right: 32px;
+}
+
+nav > div > a:first-child::before{
+    width: 20px;
+    height: 1px;
+    content: '';
+    background: white;
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
+
+nav > div > a:first-child::after{
+    width: 20px;
+    height: 1px;
+    content: '';
+    background: white;
+    position: absolute;
+    right: 0px;
+    bottom: 8px;
+
+}
+@media (max-device-width : 800px) {
+   nav{
+    padding: var(--padding-nav-secondary);
+   }
+}
