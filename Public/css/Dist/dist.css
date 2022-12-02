@@ -93,6 +93,9 @@ body{
 	background: var(--black-secondary);
 }
 
+a{
+	cursor: pointer;
+}
 
 /* Font assets */
 .TextGradient{
@@ -129,6 +132,8 @@ body{
 }
 
 .Button{
+	/* width: 200px;
+	height: 56px; */
 	padding: 16px 62px;
 	border: 1px solid var(--White-500);
 	border-radius: 6px;
