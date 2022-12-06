@@ -34,13 +34,13 @@
 
 		<!-- Introduction game -->
 		<div class="button-introduction">
-			<a class="Button dark body-16 TextWhite TextBold" id="playNow" onclick="nextFunction()">Play  now</a>
+			<a  class="Button dark body-16 TextWhite TextBold" id="playNow" onclick="nextFunction()">Play  now</a>
 			<a class="body-16 TextLink TextGrey" href="https://backmarket.com" target="_blanck" id="backButton">Discover more information</a>
 		</div>
 		<!-- Introduction game -->
 		<section class="intro-section" id="intro">
 				<!-- <img class="fit-picture" src="Public/sources/images/Logo.png" alt="" width="30%"> -->
-				<svg width="321" height="123" viewBox="0 0 321 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg  class="intro_logo" width="321" height="123" viewBox="0 0 321 123" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_640_45442)">
 					<path d="M70.033 0.88147H68.0757V2.83879H70.033V0.88147Z" fill="url(#paint0_linear_640_45442)"/>
 					<path d="M71.991 0.88147H70.0337V2.83879H71.991V0.88147Z" fill="url(#paint1_linear_640_45442)"/>
@@ -18807,7 +18807,7 @@
 					</linearGradient>
 					</defs>
 				</svg>	
-				<p class="body-16 TextWhite">Only you can save devices from becoming e-waste. Become the hero you were meant to be!</p>
+				<p id="intro_title" class="body-16 TextWhite">Only you can save devices from becoming e-waste. Become the hero you were meant to be!</p>
 				<div><img src="public/sources/images/Skydesktop.svg" alt=""></div>
 		</section>
 			<!-- Rules section -->
@@ -18839,7 +18839,21 @@
 
     </main>
 
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<script>
+		// scroll reveal anime
+		const sr = ScrollReveal();
+		sr.reveal('#intro_logo', {
+			delay: 200,
+			duration: 1300,
+			distance: "100px",
+			origin: "bottom"
+		});
+
+
+
+
 		function nextFunction() {
 			var introSection = document.getElementById("intro");
 			var rules = document.getElementById("rules");
@@ -18861,6 +18875,8 @@
 			}
 		}
 	</script>
+
+	
 
 </body>
 </html>
