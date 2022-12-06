@@ -1,0 +1,59 @@
+.game{
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 56px;
+    border-bottom: 150px black solid;
+    position: relative;
+}
+
+.forest{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.iPhone{
+    width: auto;
+    position: absolute;
+    bottom: 156px;
+    right: 156px;
+    display: flex;
+    width: 100%;
+    animation: iphone 40s infinite linear;
+
+}
+
+.iPhone > svg{
+    margin-right: 300px;
+}
+
+.iPhone > svg:last-child{
+    margin-right: 0px;
+}
+
+@keyframes iphone{
+    0%{left: 100%;}
+    100%{left: -40px;}
+}
+
+
+.trash{
+    position: absolute;
+    bottom: 0px;
+    animation: trash 10s infinite linear;
+    display: flex;
+}
+
+.trash > svg{
+    margin-right: 56px;
+}
+
+.trash > svg:last-child{
+    margin-right: 0px;
+}
+
+@keyframes trash{
+    0%{left: 100%;}
+    100%{left: -500px;}
+}

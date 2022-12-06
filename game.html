@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
 	<title>GAMER ----- Ewaste Avenger - Back Market</title>
 	<meta charset="utf-8">
@@ -22,7 +22,6 @@
 	<meta name="theme-color" content="#000000">
 </head>
 <body>
-
     <main>
         <nav>
 			<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
@@ -39,19 +38,22 @@
         </section>
     </main>
 
+    
+
     <script>
 
         var character = document.getElementById("character");
         var block = document.getElementById("block");
         var counter=0;
         
-        window.addEventListener('keydown', function(event) {
+        // window.addEventListener('keydown', function(event) {
+         function jump(){
             if(character.classList == "animate"){return}
             character.classList.add("animate");
             setTimeout(function(){
                 character.classList.remove("animate");
             },300);
-        });
+        };
 
        
         var checkDead = setInterval(function() {
@@ -67,6 +69,7 @@
                 document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
             }
         }, 10);
+
 
     </script>
 
