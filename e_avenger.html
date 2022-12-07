@@ -23,6 +23,7 @@
 </head>
 <body>
     <main>
+
         <nav>
 			<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
 			<div>
@@ -30,8 +31,17 @@
 			</div>
 		</nav>
 
+		<section class="game-all">
 			<section class="game">
-				<div class="forest">
+				<!-- Start here -->
+				<div class="dino" id="dino">
+				</div>
+
+				<div class="cactus" id="cactus">
+				</div>
+			</section>
+			
+			<div class="forest">
 					<svg width="2059" height="328" viewBox="0 0 2059 328" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g opacity="0.1">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M87.07 10.8838H54.4187V54.4188H87.07V10.8838ZM32.6509 99.0422V54.4188H108.837V218.764H32.6509V207.88H21.7677V99.0422H32.6509ZM21.7671 153.461H10.8833V218.764H21.7671V153.461ZM108.837 97.9539H130.605V218.764H108.837V97.9539Z" fill="#3A8E39"/>
@@ -964,15 +974,13 @@
 						<rect x="1985.93" y="254.985" width="18.1541" height="54.4623" fill="#A45D28"/>
 						</g>
 					</svg>	
-				</div>
-				<!-- Start here -->
-				<div class="character" id="character">
+			</div>
 
-				</div>
-				<div class="blocks">
-				</div>
-			</section>
-        </section>
+			<div>
+				<a class="Button dark body-16 TextWhite TextBold" onclick="play()">Play</a>
+			</div>
+		</section>
+
     </main>
 
 
@@ -980,48 +988,67 @@
 
     <script>
 		var character = document.getElementById("character");
-		// let characterBottom = parseInt(window.getComputedStyle(character).getPropertyValue('bottom'));
-		// let characterRight = parseInt(window.getComputedStyle(character).getPropertyValue('right'));
-		// let characterWidth = parseInt(window.getComputedStyle(character).getPropertyValue('width'));
-		// function control(e){
-		// 	if (e.key == 'Space' || e.key == ' ' ){
-		// 		jump()
-		// 	}
-		// }
+		const dino = document.getElementById("dino");
+		const cactus = document.getElementById("cactus");
 
-		function jump(){
-			if(character.classList == "animate"){return}
-            character.classList.add("animate");
-            setTimeout(function(){
-                character.classList.remove("animate");
-            },500);
-		};
+		function play(){
+			cactus.style.animation = "block 1s infinite linear";
+		}
+
+		function jump() {
+		if (dino.classList != "jump") {
+			dino.classList.add("jump");
+
+			setTimeout(function () {
+			dino.classList.remove("jump");
+			}, 300);
+		}
+		}
+
+		let isAlive = setInterval(function () {
+		// get current dino Y position
+		let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+
+		// get current cactus X position
+		let cactusLeft = parseInt(
+			window.getComputedStyle(cactus).getPropertyValue("left")
+		);
+		
+		if (cactusLeft < 20 && cactusLeft >- 20 && dinoTop >= 130) {
+			cactus.style.animation = "none";
+			alert("Game Over!");
+		}
+		}, 10);
+
+		document.addEventListener("keydown", function (event) {
+		jump()
+		});
 
 
 
 		
 		
 
-		function generateBlock(){
-			let blocks = document.querySelector('.blocks');
-			let block = document.createElement('div');
-			block.setAttribute('class','block');
-			blocks.appendChild(block);
+		// function generateBlock(){
+		// 	let blocks = document.querySelector('.blocks');
+		// 	let block = document.createElement('div');
+		// 	block.setAttribute('class','block');
+		// 	blocks.appendChild(block);
 
-			let blockRight = -100;
-			let blockBottom = 0;
+		// 	let blockRight = -100;
+		// 	let blockBottom = 0;
 			
 
-			function moveBlock(){
-				blockRight += 5;
-				block.style.right = blockRight + 'px';
-				block.style.paddingBottom = blockBottom + 'px';
+		// 	function moveBlock(){
+		// 		blockRight += 5;
+		// 		block.style.right = blockRight + 'px';
+		// 		block.style.paddingBottom = blockBottom + 'px';
 
-			}
-			let blockInterval = setInterval(moveBlock, 20);
-			let blockTimeout = setTimeout(generateBlock, 1000);
-		}
-		generateBlock();
+		// 	}
+		// 	let blockInterval = setInterval(moveBlock, 20);
+		// 	let blockTimeout = setTimeout(generateBlock, 1000);
+		// }
+		// generateBlock();
 		
 
     </script>
