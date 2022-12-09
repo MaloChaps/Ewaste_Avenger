@@ -1,10 +1,16 @@
+#counter{
+  position: fixed;
+  z-index: 99;
+  top: 12px;
+  left: 12px;
+}
+
 .game-all{
     width: 100%;
     height: 100vh;
-    border-bottom: 111px solid black;
+    border-bottom: 111px solid var(--black-primary);
     position: relative;
 }
-
 
 .forest{
     position: absolute;
@@ -18,7 +24,6 @@
     width: 100%;
     height: 200px;
     padding-bottom: 56px;
-
     margin: auto;
     overflow: hidden;
     position: absolute;
@@ -27,25 +32,23 @@
 }
 
 .game-all > div:last-child{
-    z-index: 100;
+    z-index: 95;
     position: absolute;
     display: flex;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 72px;
     justify-content: center;
 }
 
 
-
-
 #dino {
-    width: 10px;
+    width: 50px;
     height: 50px;
-    background-color: red;
-    background-size: 50px 50px;
+    background-image: url(../sources/images/monster_icon.svg);
+    background-size: cover;
     position: relative;
     top: 150px;
-    left: 30px;
+    left: 20px;
     z-index: 1;
   }
   
@@ -55,8 +58,8 @@
   
   @keyframes jump {
     0%{top: 150px;}
-    30%{top: 100px;}
-    70%{top: 100px;}
+    30%{top: 90px;}
+    70%{top: 90px;}
     100%{top: 150px;}
   }
   

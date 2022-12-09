@@ -24,10 +24,16 @@
 <body>
     <main>
 
-        <nav>
-			<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
+		<!-- Nav -->
+		<nav>
 			<div>
-				<a href="#" class="pixel-20 TextWhite TextUppercase">menu</a>
+				<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
+				<div>
+					<a href="#" id="menu" onclick="clickOpenMenu()" class="pixel-20 TextWhite TextUppercase">menu</a>
+				</div>
+			</div>
+			
+			<div class="nav-open displayNone" id="navOpen">
 			</div>
 		</nav>
 
@@ -985,11 +991,17 @@
 
 
     
-
+	<script src="Public/js/dist.js"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
+		// scroll reveal anime
+		const sr = ScrollReveal();
+
 		var character = document.getElementById("character");
 		const dino = document.getElementById("dino");
 		const cactus = document.getElementById("cactus");
+		var counter=0;
 
 		function play(){
 			cactus.style.animation = "block 1s infinite linear";
@@ -1008,12 +1020,11 @@
 		let isAlive = setInterval(function () {
 		// get current dino Y position
 		let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
-
 		// get current cactus X position
 		let cactusLeft = parseInt(
 			window.getComputedStyle(cactus).getPropertyValue("left")
 		);
-		
+
 		if (cactusLeft < 20 && cactusLeft >- 20 && dinoTop >= 130) {
 			cactus.style.animation = "none";
 			alert("Game Over!");
@@ -1023,33 +1034,6 @@
 		document.addEventListener("keydown", function (event) {
 		jump()
 		});
-
-
-
-		
-		
-
-		// function generateBlock(){
-		// 	let blocks = document.querySelector('.blocks');
-		// 	let block = document.createElement('div');
-		// 	block.setAttribute('class','block');
-		// 	blocks.appendChild(block);
-
-		// 	let blockRight = -100;
-		// 	let blockBottom = 0;
-			
-
-		// 	function moveBlock(){
-		// 		blockRight += 5;
-		// 		block.style.right = blockRight + 'px';
-		// 		block.style.paddingBottom = blockBottom + 'px';
-
-		// 	}
-		// 	let blockInterval = setInterval(moveBlock, 20);
-		// 	let blockTimeout = setTimeout(generateBlock, 1000);
-		// }
-		// generateBlock();
-		
 
     </script>
 

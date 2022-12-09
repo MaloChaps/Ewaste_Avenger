@@ -1,15 +1,7 @@
-.displayNone{
-    display: none;
-}
-
-.displayActive{
-    display: flex;
-}
-
 .button-introduction{
     width: 100%;
     position: absolute;
-    z-index: 99;
+    z-index: 96;
     bottom: 32px;
     display: flex;
     flex-direction: column;
@@ -40,12 +32,12 @@
     align-items: center;
     text-align: center;
 }
-.intro-section > svg:first-child{
+.intro-section > div:first-child > svg{
     margin-top: 100px !important;
     margin-bottom: 72px;
     scale: 1.3;
 }
-.intro-section > svg{
+.intro-section > div > svg{
     margin-bottom: 56px;
     scale: 1.2;
 }
@@ -70,16 +62,20 @@
 } 
 
 @media (max-device-width : 800px){
-    .intro-section > p{
-        width: 100%;
+    .intro-section{
+        padding: var(--padding-secondary);
     }
-    .intro-section > svg:first-child{
+    .intro-section > p{
+        width: 280px;
+        padding-bottom: 212px !important;
+    }
+    .intro-section > div:first-child > svg{
         margin-top: 90px !important;
         scale: 0.9;
         margin-bottom: 20px;
     }
-    .intro-section > svg{
-        margin-bottom: 16px;
+    .intro-section > div > svg{
+        margin-bottom: 0px;
         scale: 0.9;
     }
 }
@@ -115,35 +111,45 @@
     margin-bottom: 100px !important;
 }
 
-.rules-section > div:last-child > div{
+.rules-section-instruction-card{
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--White-500);
-    display: flex;flex-direction: column;
-    align-items: flex-start;
-    margin-right: 24px;
     padding: 24px;
+    margin-right: 12px;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
-    
 }
-.rules-section > div:last-child > div:last-child{
+
+.rules-section-instruction-card:last-child{
     margin-right: 0px;
 }
 
-.rules-section > div:last-child > div > h3,
-.rules-section > div:last-child > div > div{
+.rules-section-instruction-card > h3,
+.rules-section-instruction-card > div{
     margin-bottom: 16px;
 }
 
-.rules-section > div:last-child > div > div{
+.rules-section-instruction-card > div{
     width: 100%;
     text-align: center;
+    width: 256px;
+    height: 140px;
+}
+
+.rules-section-instruction-card > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media (max-device-width : 800px) {
     .rules-section{
         padding: var(--padding-secondary);
-        padding-top: 80px !important;
+        padding-bottom: 32px !important;
     }
     .rules-section > div:first-child{
         margin-bottom: 12px;
@@ -158,6 +164,3 @@
 }
 }
 
-
-
-/* CANVAS GAME ////////////////////////////////////////////////*/

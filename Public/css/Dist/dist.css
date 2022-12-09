@@ -69,6 +69,15 @@ html *{
 	text-decoration: none;
 }
 
+/* display active or not */
+.displayNone{
+    display: none;
+}
+
+.displayActive{
+    display: flex;
+}
+
 /*scroll bar css*/
 
 ::-webkit-scrollbar {
@@ -224,20 +233,25 @@ main{
 
 nav{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    padding: var(--padding-nav);
-    position: absolute;
-    z-index: 99;
+	position: absolute;
+    z-index: 98;
 }
 
-nav > div > a:first-child{
+nav > div {
+	width: 100%;
+	position: absolute;	
+	z-index: 98;
+	display: flex;
+	justify-content: space-between;
+	padding: var(--padding-nav);
+}
+
+nav > div > div > a:first-child{
     position: relative;
     padding-right: 32px;
 }
 
-nav > div > a:first-child::before{
+#menu::before{ 
     width: 20px;
     height: 1px;
     content: '';
@@ -247,7 +261,7 @@ nav > div > a:first-child::before{
     top: 8px;
 }
 
-nav > div > a:first-child::after{
+#menu::after{
     width: 20px;
     height: 1px;
     content: '';
@@ -255,10 +269,69 @@ nav > div > a:first-child::after{
     position: absolute;
     right: 0px;
     bottom: 8px;
-
 }
+
+
+
+.nav-open{
+	position: absolute;
+	z-index: 97;
+	width: 100%;
+	height: 100vh;
+	padding: 0px !important;
+	background-color: black;
+}
+
+
 @media (max-device-width : 800px) {
    nav{
-    padding: var(--padding-nav-secondary);
+    /* padding: var(--padding-nav-secondary); */
    }
+}
+
+
+
+/* Loader */
+.loader-section{
+    position: fixed;
+    z-index: 99
+	;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+}
+
+.loader-section > p{
+    position: absolute;
+}
+
+.loader-section > div{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: solid var(--White-500) 1px;
+    display: flex;
+    transform: scale(1);
+    justify-content: center;align-items: center;
+    animation: loader 4s infinite cubic-bezier(.67,0,.38,1.01);
+    
+}
+
+.loader-section > div > div{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: solid var(--White-100) 1px;
+    animation: loader 4s infinite cubic-bezier(.67,0,.38,1.01);
+
+}
+
+@keyframes loader{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.5);}
+    100%{transform: scale(1);}
 }

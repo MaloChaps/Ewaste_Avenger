@@ -23,24 +23,34 @@
 </head>
 <body>
 
+	<div class="loader-section">
+		<p class="body-16 TextWhite">Loading...</p>
+		<div><div></div></div>
+	</div>
     <main>
 		<!-- Nav -->
 		<nav>
-			<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
 			<div>
-				<a href="#" class="pixel-20 TextWhite TextUppercase">menu</a>
+				<a href="index.html" class="pixel-20 TextGradient TextUppercase">E-Avenger</a>
+				<div>
+					<a href="#" id="menu" onclick="clickOpenMenu()" class="pixel-20 TextWhite TextUppercase">menu</a>
+				</div>
+			</div>
+			
+			<div class="nav-open displayNone" id="navOpen">
 			</div>
 		</nav>
 
 		<!-- Introduction game -->
 		<div class="button-introduction">
-			<a  class="Button dark body-16 TextWhite TextBold" id="playNow" onclick="nextFunction()">Play  now</a>
+			<a class="Button dark body-16 TextWhite TextBold" id="playNow" onclick="nextFunction()">Play  now</a>
 			<a class="body-16 TextLink TextGrey" href="https://backmarket.com" target="_blanck" id="backButton">Discover more information</a>
 		</div>
 		<!-- Introduction game -->
 		<section class="intro-section" id="intro">
 				<!-- <img class="fit-picture" src="Public/sources/images/Logo.png" alt="" width="30%"> -->
-				<svg  class="intro_logo" width="321" height="123" viewBox="0 0 321 123" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<div id="intro_logo">
+					<svg  width="321" height="123" viewBox="0 0 321 123" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_640_45442)">
 					<path d="M70.033 0.88147H68.0757V2.83879H70.033V0.88147Z" fill="url(#paint0_linear_640_45442)"/>
 					<path d="M71.991 0.88147H70.0337V2.83879H71.991V0.88147Z" fill="url(#paint1_linear_640_45442)"/>
@@ -18557,8 +18567,10 @@
 					<rect width="321" height="80" fill="white" transform="translate(0 43)"/>
 					</clipPath>
 					</defs>
-				</svg>
-				<svg width="341" height="154" viewBox="0 0 341 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+					</svg>
+				</div>
+				<div id="arme_logo">
+					<svg width="341" height="154" viewBox="0 0 341 154" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M129.377 42.4449C120.745 50.4971 112.129 58.5642 103.519 66.6386C96.2173 73.4949 88.9227 80.3511 81.6505 87.2445C78.0032 90.6987 74.2371 94.0859 70.7533 97.7109C70.6864 97.7777 70.6196 97.8223 70.5527 97.8668C73.888 100.727 77.565 103.178 81.4871 105.176C88.1279 98.4537 94.6202 91.59 100.986 84.6075C112.775 71.6824 124.162 58.3933 135.253 44.8665C143.349 34.9943 151.283 24.9885 159.075 14.8713C156.787 16.9735 154.521 19.098 152.241 21.2001C144.605 28.257 136.991 35.3509 129.384 42.4449H129.377Z" fill="#FEFCFD"/>
 					<path d="M96.6258 112.01C92.2283 111.238 87.9497 109.953 83.8567 108.177C69.4831 101.967 57.9991 89.7407 53.1707 74.8025C52.725 75.367 52.3685 76.0059 52.1085 76.6521C51.5291 78.0709 51.6925 79.3411 52.1308 80.7896C52.9924 83.6569 54.7529 86.2643 56.3946 88.7379C61.7206 96.7455 68.7403 103.579 77.1342 108.319C81.4277 110.74 86.0109 112.597 90.7575 113.919C92.1541 114.306 93.6323 114.796 95.1031 114.737C96.1579 114.7 97.7475 114.187 97.9629 112.969C98.0224 112.62 97.9852 112.226 97.9035 111.832C97.5915 111.988 97.2498 112.033 96.9007 112.003C96.8116 112.018 96.7298 112.025 96.6258 112.003V112.01Z" fill="#FFFF22"/>
 					<path d="M96.6258 112.01C92.2283 111.238 87.9497 109.953 83.8567 108.177C69.4831 101.967 57.9991 89.7407 53.1707 74.8025C52.725 75.367 52.3685 76.0059 52.1085 76.6521C51.5291 78.0709 51.6925 79.3411 52.1308 80.7896C52.9924 83.6569 54.7529 86.2643 56.3946 88.7379C61.7206 96.7455 68.7403 103.579 77.1342 108.319C81.4277 110.74 86.0109 112.597 90.7575 113.919C92.1541 114.306 93.6323 114.796 95.1031 114.737C96.1579 114.7 97.7475 114.187 97.9629 112.969C98.0224 112.62 97.9852 112.226 97.9035 111.832C97.5915 111.988 97.2498 112.033 96.9007 112.003C96.8116 112.018 96.7298 112.025 96.6258 112.003V112.01Z" fill="url(#paint0_linear_604_31191)"/>
@@ -18806,7 +18818,9 @@
 					<stop offset="0.989583" stop-color="#FD22FE"/>
 					</linearGradient>
 					</defs>
-				</svg>	
+					</svg>
+				</div>	
+
 				<p id="intro_title" class="body-16 TextWhite">Only you can save devices from becoming e-waste. Become the hero you were meant to be!</p>
 				<div><img src="public/sources/images/Skydesktop.svg" alt=""></div>
 		</section>
@@ -18819,39 +18833,63 @@
 			<div>
 				<div class="rules-section-instruction-card">
 					<h3 class="pixel-72 TextGradient">1</h3>
-					<div><img src="Public/sources/images/tutos/tuto1.png" width="256px" height="140px"></div>
+					<div><img src="Public/sources/images/tutos/tuto1.png"></div>
 					<p class="body-16 TextWhite">Defend yourself against toxic e-waste monsters with your Refurb Beam</p>
 				</div>
 
 				<div class="rules-section-instruction-card">
 					<h3 class="pixel-72 TextGradient">2</h3>
-					<div><img src="Public/sources/images/tutos/tuto1.png" width="256px" height="140px"></div>
-					<p class="body-16 TextWhite">Defend yourself against toxic e-waste monsters with your Refurb Beam</p>
+					<div><img src="Public/sources/images/tutos/tuto2.png" ></div>
+					<p class="body-16 TextWhite">Avoid sludge pits by jumping over them</p>
 				</div>
 
 				<div class="rules-section-instruction-card">
 					<h3 class="pixel-72 TextGradient">3</h3>
-					<div><img src="Public/sources/images/tutos/tuto1.png" width="256px" height="140px"></div>
-					<p class="body-16 TextWhite">Defend yourself against toxic e-waste monsters with your Refurb Beam</p>
+					<div><img src="Public/sources/images/tutos/tuto3.png"></div>
+					<p class="body-16 TextWhite">Collect devices as your run to power up your Refurb Beam</p>
 				</div>
 			</div>
 		</section>
 
     </main>
 
+	<script src="Public/js/dist.js"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<script>
+		$(window).load(function() {
+    	 $(".loader-section").fadeOut("1000"); 
+ 		});
+
 		// scroll reveal anime
 		const sr = ScrollReveal();
 		sr.reveal('#intro_logo', {
-			delay: 200,
-			duration: 1300,
-			distance: "100px",
-			origin: "bottom"
+		delay: 200,
+		duration: 1300,
+		distance: "100px",
+		origin: "bottom"
 		});
 
+		sr.reveal('#arme_logo', {
+		delay: 300,
+		duration: 1300,
+		distance: "100px",
+		origin: "bottom"
+		});
 
+		sr.reveal('.button-introduction', {
+		delay: 300,
+		duration: 1300,
+		distance: "100px",
+		origin: "bottom"
+		});
+
+		sr.reveal('#intro_title', {
+		delay: 300,
+		duration: 1300,
+		distance: "100px",
+		origin: "bottom"
+		});			
 
 
 		function nextFunction() {
@@ -18859,17 +18897,17 @@
 			var rules = document.getElementById("rules");
 			var backButton = document.getElementById("backButton");
 			var playNow = document.getElementById("playNow");
+			
 
 			introSection.style.display = "none";
 			rules.style.display = "flex";
-
-			
 
 			backButton.innerHTML = "Back to the intro";
 			backButton.setAttribute("href", "index.html");
 			backButton.setAttribute("target", "_self");
 
 			setTimeout(checkPlay, 100); 
+
 			function checkPlay() {
 				playNow.setAttribute("href", "e_avenger.html");
 			}

@@ -1,0 +1,41 @@
+<svg width="142" height="135" viewBox="0 0 142 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="12" y="120.559" width="40" height="14" fill="black"/>
+<rect x="77" y="120.559" width="40" height="14" fill="black"/>
+<rect x="35" y="33" width="96" height="88" fill="url(#paint0_linear_652_44971)"/>
+<rect x="120.199" y="96.8" width="10.4969" height="24.2" fill="#57C05A"/>
+<rect x="16" y="97" width="11.3043" height="24.2" fill="black"/>
+<rect x="24.3047" y="96.8" width="11.3043" height="24.2" fill="#145115"/>
+<rect x="105.664" y="61.3066" width="11.3043" height="11.2933" fill="#145115"/>
+<rect x="83.0557" y="61.3066" width="11.3043" height="11.2933" fill="#145115"/>
+<rect x="23.3047" y="24.2" width="11.3043" height="47.5933" fill="black"/>
+<rect x="24.3047" y="84.7" width="11.3043" height="12.1" fill="black"/>
+<rect x="34.6094" y="72.6" width="11.3043" height="12.1" fill="black"/>
+<rect x="34.6094" y="12.1" width="11.3043" height="12.1" fill="black"/>
+<rect x="45.9131" width="11.3043" height="12.1" fill="black"/>
+<rect x="57.2168" y="12.1" width="11.3043" height="12.1" fill="black"/>
+<rect x="45.9131" y="12.1" width="11.3043" height="12.1" fill="#C39C71"/>
+<rect x="108.087" y="12.1" width="11.3043" height="12.1" fill="#E2C3A1"/>
+<rect x="119.391" y="24.2" width="11.3043" height="24.2" fill="#E2C3A1"/>
+<rect x="96.7832" y="12.1" width="11.3043" height="12.1" fill="black"/>
+<rect x="45.9131" y="24.2" width="73.4783" height="12.1" fill="black"/>
+<rect x="108.087" width="11.3043" height="12.1" fill="black"/>
+<rect x="119.391" y="12.1" width="11.3043" height="12.1" fill="black"/>
+<rect x="119.391" y="48.4" width="11.3043" height="12.1" fill="black"/>
+<rect x="119.391" y="84.7" width="11.3043" height="12.1" fill="black"/>
+<rect x="94.3604" y="49.2067" width="11.3043" height="12.1" fill="black"/>
+<rect x="71.752" y="49.2067" width="11.3043" height="12.1" fill="black"/>
+<rect x="45.9131" y="36.3" width="11.3043" height="12.1" fill="#C39C71"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M77 87H60V98V111H97V98H77V87Z" fill="#145115"/>
+<rect x="34.6094" y="24.2" width="11.3043" height="24.2" fill="#AD875C"/>
+<rect x="34.6094" y="48.4" width="11.3043" height="25.8133" fill="#3BB43E"/>
+<rect x="130.695" y="24.2" width="11.3043" height="24.2" fill="black"/>
+<rect x="130.695" y="60.5" width="11.3043" height="24.2" fill="black"/>
+<rect x="130.695" y="96.8" width="11.3043" height="24.2" fill="black"/>
+<defs>
+<linearGradient id="paint0_linear_652_44971" x1="83" y1="33" x2="83" y2="121" gradientUnits="userSpaceOnUse">
+<stop stop-color="#28FB20"/>
+<stop offset="0.78125" stop-color="#FFFF22"/>
+<stop offset="0.989583" stop-color="#FD22FE"/>
+</linearGradient>
+</defs>
+</svg>
