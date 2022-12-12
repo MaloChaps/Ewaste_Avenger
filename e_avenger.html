@@ -1023,7 +1023,8 @@
 				<p class="body-16 TextGrey">"Click" or "Espace" to start</p>
 			</div>
 		</section>
-
+		
+		<p class="score">score: <span id="score">1</span></p>
     </main>
 
 
@@ -1038,6 +1039,7 @@
 		var character = document.getElementById("character");
 		const dino = document.getElementById("dino");
 		const cactus = document.getElementById("cactus");
+		var scoreSpan = document.getElementById("score")
 		var counter=0;
 
 		function play(){
@@ -1064,8 +1066,11 @@
 
 		if (cactusLeft < 30 && cactusLeft >- 30 && dinoTop >= 130) {
 			cactus.style.animation = "none";
-			alert("Game Over!");
-		}
+			alert("Game Over. score: "+Math.floor(counter/100));
+			counter=0;
+		}else{
+        	counter++;
+        	document.getElementById("score").innerHTML = Math.floor(counter/100);}
 		}, 10);
 
 		document.addEventListener("keydown", function (event) {
