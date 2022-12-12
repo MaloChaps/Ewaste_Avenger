@@ -1,11 +1,5 @@
 // scroll reveal anime
 const sr = ScrollReveal();
-sr.reveal('#navRubrique', {
-delay: 200,
-duration: 1300,
-distance: "100px",
-origin: "bottom"
-});
 
 sr.reveal('#intro_logo', {
 delay: 200,
@@ -40,6 +34,8 @@ var navOpen = document.getElementById("navOpen");
 var burgerNav = document.getElementById("burgerIcon");
 
 function clickOpenMenu(){
+   navOpen.classList.remove("displayNone");
+
    navOpen.classList.toggle("navOpen");
    burgerNav.classList.toggle("burgerClose");
 
